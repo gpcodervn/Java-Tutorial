@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:department xmlns:ns2="http://gpcoder.com/jaxb">
+    <no>D01</no>
+    <name>IT Support</name>
+    <employees>
+        <employee id="1">
+            <name>GP Coder</name>
+            <salary>1000.0</salary>
+        </employee>
+        <employee id="2">
+            <name>LN Devil</name>
+            <salary>700.0</salary>
+        </employee>
+    </employees>
+</ns2:department>
