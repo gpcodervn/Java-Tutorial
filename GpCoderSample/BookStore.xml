@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookStore xmlns="com.gpcoder.combine.annoation.reflection">
+	<name>Fraport Bookstore</name>
+	<location>Frankfurt Airport</location>
+	<bookList>
+		<book isbn="978-0-13-708189-9">
+			<name>Core Java Volume I</name>
+			<author>Horstmann, Cay S. and Cornell</author>
+			<publisher>Oracle</publisher>
+		</book>
+		<book isbn="978-3832180577">
+			<name>Spring MVC Beginner’s Guide</name>
+			<author>Amuthan G</author>
+			<publisher>Packt Pub</publisher>
+		</book>
+		<book isbn="999-1234567890">
+			<name>Java 8 in Action</name>
+			<author>Raoul-Gabriel Urma</author>
+			<publisher>Manning Publications Co.</publisher>
+		</book>
+	</bookList>
+</bookStore>
