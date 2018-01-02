@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.converter-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.core-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.document-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.document.docx-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.document.odt-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.document.tools-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.itext.extension-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.itext.extension-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.remoting.resources-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.remoting.resources.services.client-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.template-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.template.freemarker-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.template.velocity-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/freemarker-2.3.20.jar"/>
+	<classpathentry kind="lib" path="lib/itext-2.1.7.jar"/>
+	<classpathentry kind="lib" path="lib/ooxml-schemas-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/org.apache.poi.xwpf.converter.core-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/org.apache.poi.xwpf.converter.pdf-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/org.apache.poi.xwpf.converter.xhtml-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/velocity-1.7.jar"/>
+	<classpathentry kind="lib" path="lib/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/fr.opensagres.xdocreport.converter.docx.xwpf-1.0.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

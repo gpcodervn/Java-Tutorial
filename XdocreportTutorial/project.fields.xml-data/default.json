@@ -1,0 +1,15 @@
+{
+	"project": {
+		"Name": "XDocReport"
+	},
+	"developers": [{
+			"Name": "Giang",
+			"Mail": "gpcoder@gmail.com",
+			"LastName": "Phan"
+		}, {
+			"Name": "ZERR",
+			"Mail": "angelo.zerr@gmail.com",
+			"LastName": "Angelo"
+		}
+	]
+}
