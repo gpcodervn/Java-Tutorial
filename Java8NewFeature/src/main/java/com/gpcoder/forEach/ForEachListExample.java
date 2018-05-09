@@ -3,7 +3,7 @@ package com.gpcoder.forEach;
 import java.util.Arrays;
 import java.util.List;
 
-public interface ForEachExample {
+public interface ForEachListExample {
 
 	public static void main(String[] args) {
 		List<String> languages = Arrays.asList("Java", "C#", "C++", "PHP", "Javascript");
