@@ -20,7 +20,7 @@ public class Java8Overview_Filter {
 		Stream<Integer> stream = numbers.stream().filter(new Predicate<Integer>() {
 			@Override
 			public boolean test(Integer t) {
-				return t % 2 == 1;
+				return t % 2 != 0;
 			}
 		});
 		stream.forEach(t -> System.out.print(t + " "));
@@ -28,7 +28,7 @@ public class Java8Overview_Filter {
 
 	public static void java8Lamda() {
 		List<Integer> numbers = createDummyData();
-		numbers.stream().sorted().filter(t -> t % 2 == 1).forEach(t -> System.out.print(t + " "));
+		numbers.stream().sorted().filter(t -> t % 2 != 0).forEach(t -> System.out.print(t + " "));
 	}
 
 	private static List<Integer> createDummyData() {
