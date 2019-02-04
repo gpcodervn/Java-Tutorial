@@ -43,6 +43,7 @@ public class CompletableFuture7_ThenCompose {
 		// Usign thenApply()
 		CompletableFuture<CompletableFuture<Double>> nested = ApiUtil.getUsersDetail("1")
 				.thenApply(user -> ApiUtil.getCreditRating(user));
+		System.out.println(nested.get()); // 1.0
 
 		// Using thenCompose()
 		CompletableFuture<Double> flattened = ApiUtil.getUsersDetail("1")

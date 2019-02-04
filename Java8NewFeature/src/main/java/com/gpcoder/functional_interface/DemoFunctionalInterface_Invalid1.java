@@ -1,10 +1,10 @@
-package com.gpcoder.functional_interface;
-
-@FunctionalInterface
-public interface DemoFunctionalInterface_Invalid1 {
-
-	void doSomething();
-
-	void doSomething2();
-
-}
+//package com.gpcoder.functional_interface;
+//
+//@FunctionalInterface
+//public interface DemoFunctionalInterface_Invalid1 {
+//
+//	void doSomething();
+//
+//	void doSomething2();
+//
+//}
