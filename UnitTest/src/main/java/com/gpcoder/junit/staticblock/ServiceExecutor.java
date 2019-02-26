@@ -1,4 +1,4 @@
-package com.gpcoder.staticblock;
+package com.gpcoder.junit.staticblock;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.gpcoder;
+package com.gpcoder.junit.staticblock;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;

@@ -1,4 +1,4 @@
-package com.gpcoder;
+package com.gpcoder.junit.staticblock;
 
 import java.util.Arrays;
 
@@ -10,8 +10,8 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import com.gpcoder.staticblock.FirstController;
-import com.gpcoder.staticblock.ServiceExecutor;
+import com.gpcoder.junit.staticblock.FirstController;
+import com.gpcoder.junit.staticblock.ServiceExecutor;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({ ServiceExecutor.class, Arrays.class })

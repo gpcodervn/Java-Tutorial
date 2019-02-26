@@ -1,4 +1,4 @@
-package com.gpcoder.staticblock;
+package com.gpcoder.junit.staticblock;
 
 public interface Service {
 	void execute();
