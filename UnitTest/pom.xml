@@ -48,21 +48,51 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-module-junit4</artifactId>
 			<version>1.7.4</version>
 			<scope>test</scope>
-		</dependency> -->
-
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito2 -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-api-mockito2</artifactId>
 			<version>1.7.4</version>
 			<scope>test</scope>
-		</dependency> -->
+		</dependency>
 
 	</dependencies>
+	
+	<reporting>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-project-info-reports-plugin</artifactId>
+	            <version>3.0.0</version>
+	            <reportSets>
+	                <reportSet>
+	                    <reports>
+	                        <report>index</report>
+	                        <report>licenses</report>
+	                        <report>dependency-info</report>
+	                    </reports>
+	                </reportSet>
+	            </reportSets>
+	        </plugin>
+	    </plugins>
+	</reporting>
+	
+	<build>
+	    <plugins>
+	        <!-- Part of Maven - specified version explicitly for compatibility
+	             with the maven-project-info-reports-plugin 3.0.0-->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-site-plugin</artifactId>
+	            <version>3.7.1</version>
+	        </plugin>
+	    </plugins>
+	</build>
 </project>
