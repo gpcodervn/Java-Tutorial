@@ -25,6 +25,14 @@
 			<scope>provided</scope>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-core</artifactId>
+		    <version>2.25.1</version>
+		    <scope>test</scope>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -48,20 +56,20 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-module-junit4</artifactId>
 			<version>1.7.4</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito2 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-api-mockito2</artifactId>
 			<version>1.7.4</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 	</dependencies>
 	
