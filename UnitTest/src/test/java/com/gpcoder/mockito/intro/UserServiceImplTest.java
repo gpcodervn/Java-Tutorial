@@ -1,4 +1,4 @@
-package com.gpcoder.mockito;
+package com.gpcoder.mockito.intro;
 
 import org.junit.Assert;
 import org.junit.Before;

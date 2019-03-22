@@ -1,4 +1,4 @@
-package com.gpcoder.mockito;
+package com.gpcoder.mockito.intro;
 
 public interface UserService {
 	
