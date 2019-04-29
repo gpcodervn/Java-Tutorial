@@ -1,0 +1,20 @@
+<catalog>
+	<!-- Single command "chains" from CatalogBaseTestCase -->
+	<command name="CMD_1" className="com.gpcoder.command.Command1" />
+	<command name="CMD_2" className="com.gpcoder.command.Command2" />
+
+	<!-- Chains with nested commands -->
+	<chain name="CHAIN_1">
+		<command className="com.gpcoder.filter.CommandExceptionHandler" />
+		<command className="com.gpcoder.command.Command1" />
+		<command className="com.gpcoder.command.Command2" />
+		<command className="com.gpcoder.command.Command3" />
+		<!-- Lookup Command -->
+		<command name="CHAIN_2" optional="true"
+			className="org.apache.commons.chain.generic.LookupCommand" />
+	</chain>
+
+	<chain name="CHAIN_2">
+		<command className="com.gpcoder.command.Command4" />
+	</chain>
+</catalog>
