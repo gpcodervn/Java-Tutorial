@@ -8,7 +8,7 @@ public class CyclicBarrierExample {
 
 		// 4 threads are part of the barrier, ServiceOne, ServiceTwo, ServiceThree and
 		// this main thread calling them.
-		final CyclicBarrier barrier = new CyclicBarrier(4);
+		final CyclicBarrier barrier = new CyclicBarrier(5);
 
 		Thread service1 = new Thread(new ServiceOne(barrier));
 		Thread service2 = new Thread(new ServiceTwo(barrier));
