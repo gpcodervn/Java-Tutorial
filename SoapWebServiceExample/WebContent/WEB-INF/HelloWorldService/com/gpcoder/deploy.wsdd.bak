@@ -1,0 +1,29 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from HelloWorldService WSDL service -->
+
+  <service name="HelloWorld" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://gpcoder.com"/>
+      <parameter name="wsdlServiceElement" value="HelloWorldService"/>
+      <parameter name="schemaQualified" value="http://gpcoder.com"/>
+      <parameter name="wsdlServicePort" value="HelloWorld"/>
+      <parameter name="className" value="com.gpcoder.HelloWorldSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="HelloWorld"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="sayHelloWorld" qname="operNS:sayHelloWorld" xmlns:operNS="http://gpcoder.com" returnQName="retNS:sayHelloWorldReturn" xmlns:retNS="http://gpcoder.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:name" xmlns:pns="http://gpcoder.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="sayHelloWorld"/>
+
+  </service>
+</deployment>
