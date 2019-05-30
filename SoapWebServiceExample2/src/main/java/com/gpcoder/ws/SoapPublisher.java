@@ -8,5 +8,6 @@ public class SoapPublisher {
 
 	public static void main(String[] args) {
 		Endpoint.publish(WS_URL, new UserServiceImpl());
+		System.out.println("Server is published!");
 	}
 }
