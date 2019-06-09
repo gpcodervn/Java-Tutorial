@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -24,9 +26,10 @@ public class ReadExcelExample {
 	public static final int COLUMN_INDEX_PRICE = 2;
 	public static final int COLUMN_INDEX_QUANTITY = 3;
 	public static final int COLUMN_INDEX_TOTAL = 4;
+	public static final int COLUMN_INDEX_DATE = 5;
 
 	public static void main(String[] args) throws IOException {
-		final String excelFilePath = "C:/demo/books.xlsx";
+		final String excelFilePath = "data/books.xlsx";
 		final List<Book> books = readExcel(excelFilePath);
 		for (Book book : books) {
 			System.out.println(book);
@@ -84,6 +87,9 @@ public class ReadExcelExample {
 				case COLUMN_INDEX_TOTAL:
 					book.setTotalMoney((Double) getCellValue(cell));
 					break;
+				case COLUMN_INDEX_DATE:
+					book.setPublishedDate((Date) getCellValue(cell));
+					break;
 				default:
 					break;
 				}
@@ -126,7 +132,11 @@ public class ReadExcelExample {
 			cellValue = evaluator.evaluate(cell).getNumberValue();
 			break;
 		case NUMERIC:
-			cellValue = cell.getNumericCellValue();
+			if (DateUtil.isCellDateFormatted(cell)) {
+				cellValue = cell.getDateCellValue();
+			} else {
+				cellValue = cell.getNumericCellValue();
+			}
 			break;
 		case STRING:
 			cellValue = cell.getStringCellValue();

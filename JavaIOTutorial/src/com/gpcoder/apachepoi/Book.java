@@ -1,11 +1,14 @@
 package com.gpcoder.apachepoi;
 
+import java.util.Date;
+
 public class Book {
 	private Integer id;
 	private String title;
 	private Integer quantity;
 	private Double price;
 	private Double totalMoney;
+	private Date publishedDate;
 
 	public Book() {
 		super();
@@ -63,6 +66,14 @@ public class Book {
 
 	public void setTotalMoney(Double totalMoney) {
 		this.totalMoney = totalMoney;
+	}
+
+	public Date getPublishedDate() {
+		return publishedDate;
+	}
+
+	public void setPublishedDate(Date publishedDate) {
+		this.publishedDate = publishedDate;
 	}
 
 }
