@@ -11,10 +11,12 @@
 			<param-name>javax.ws.rs.Application</param-name>
 			<param-value>com.gpcoder.config.JerseyServletContainerConfig</param-value>
 		</init-param>
-		<init-param>
-			<param-name>jersey.config.server.provider.classnames</param-name>
-			<param-value>org.glassfish.jersey.jackson.JacksonFeature</param-value>
-		</init-param>
+		<!-- <init-param>
+            <param-name>jersey.config.server.provider.classnames</param-name>
+            <param-value>org.glassfish.jersey.filter.LoggingFilter;
+            	org.glassfish.jersey.jackson.JacksonFeature;
+            	org.glassfish.jersey.media.multipart.MultiPartFeature</param-value>
+        </init-param> -->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>

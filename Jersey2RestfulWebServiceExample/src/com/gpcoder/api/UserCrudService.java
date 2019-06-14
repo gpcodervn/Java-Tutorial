@@ -21,7 +21,7 @@ import com.gpcoder.model.User;
 // http(s)://<domain>:(port)/<YourApplicationName>/<UrlPattern in web.xml>/<path>
 // http://localhost:8080/RestfulWebServiceExample/rest/users
 @Path("/users")
-public class UserService {
+public class UserCrudService {
 
 	private static final Map<Integer, User> USERS = new HashMap<>();
 	static {

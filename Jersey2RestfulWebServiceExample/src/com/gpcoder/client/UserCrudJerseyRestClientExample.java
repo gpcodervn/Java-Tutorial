@@ -19,7 +19,7 @@ import org.glassfish.jersey.logging.LoggingFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gpcoder.model.User;
 
-public class JsonJerseyRestClientExample {
+public class UserCrudJerseyRestClientExample {
 
 	public static final String API_URL = "http://localhost:8080/RestfulWebServiceExample/rest/users";
 
