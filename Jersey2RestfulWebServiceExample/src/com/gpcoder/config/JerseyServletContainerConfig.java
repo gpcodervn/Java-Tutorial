@@ -13,7 +13,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 public class JerseyServletContainerConfig extends ResourceConfig {
 	public JerseyServletContainerConfig() {
 		// if there are more than two packages then separate them with semicolon
-		packages("com.gpcoder.api");
+		packages("com.gpcoder.api, com.gpcoder.exception");
 		register(new LoggingFeature(Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME), Level.INFO,
 				LoggingFeature.Verbosity.PAYLOAD_TEXT, 10000));
 		register(JacksonFeature.class);	

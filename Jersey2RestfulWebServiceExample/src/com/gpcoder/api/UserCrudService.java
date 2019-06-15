@@ -48,7 +48,7 @@ public class UserCrudService {
 		return new ArrayList<>(USERS.values());
 	}
 
-	@PUT
+	@POST
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public int insert(User user) {
@@ -58,7 +58,7 @@ public class UserCrudService {
 		return id;
 	}
 
-	@POST
+	@PUT
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public boolean update(User user) {

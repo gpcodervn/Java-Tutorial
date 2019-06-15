@@ -76,7 +76,7 @@ public class UserCrudJerseyRestClientExample {
 	}
 
 	/**
-	 * @PUT
+	 * @POST
 	 * 
 	 * 		create user
 	 */
@@ -88,12 +88,12 @@ public class UserCrudJerseyRestClientExample {
 		Client client = createJerseyRestClient();
 		WebTarget target = client.target(API_URL);
 		Response response = target.request(MediaType.APPLICATION_JSON_TYPE)
-				.put(Entity.entity(jsonUser, MediaType.APPLICATION_JSON));
+				.post(Entity.entity(jsonUser, MediaType.APPLICATION_JSON));
 		return response.readEntity(Integer.class);
 	}
 
 	/**
-	 * @POST
+	 * @PUT
 	 * 
 	 * 		Update user
 	 */
@@ -105,7 +105,7 @@ public class UserCrudJerseyRestClientExample {
 		Client client = createJerseyRestClient();
 		WebTarget target = client.target(API_URL);
 		Response response = target.request(MediaType.APPLICATION_JSON_TYPE)
-				.post(Entity.entity(jsonUser, MediaType.APPLICATION_JSON));
+				.put(Entity.entity(jsonUser, MediaType.APPLICATION_JSON));
 		return response.readEntity(Boolean.class);
 	}
 
