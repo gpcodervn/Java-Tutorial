@@ -1,2 +1,4 @@
 /GpCoderSample/target/classes/com/gpcoder/collection/map/hashmap/*.class
 *.class
+*/bin
+*/target
