@@ -3,7 +3,7 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	version="4.0">
-	<display-name>RESTful CRUD Example by gpcoder</display-name>
+	<display-name>RESTful Filter and Intercepter with Jersey2 Example by gpcoder</display-name>
 	<servlet>
 		<servlet-name>jersey2-serlvet</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
