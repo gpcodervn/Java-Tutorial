@@ -19,6 +19,8 @@ public class UserService {
 			user.setRoles(Arrays.asList(Role.ROLE_ADMIN));
 		} else if ("customer".equals(username)) {
 			user.setRoles(Arrays.asList(Role.ROLE_CUSTOMER));
+		} else if ("gpcoder".equals(username)) {
+			user.setRoles(Arrays.asList(Role.ROLE_ADMIN, Role.ROLE_CUSTOMER));
 		} else {
 			user.setRoles(new ArrayList<>());
 		}
