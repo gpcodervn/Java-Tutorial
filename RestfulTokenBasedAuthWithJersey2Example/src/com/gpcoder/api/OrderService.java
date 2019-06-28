@@ -25,30 +25,30 @@ public class OrderService {
 	@GET
 	@Path("/{id}")
 	public Response get(@PathParam("id") int id) {
-		System.out.println("OrderService#get()");
-		return Response.ok("OrderService#get()").build();
+		System.out.println("OrderService->get()");
+		return Response.ok("OrderService->get()").build();
 	}
 
 	@RolesAllowed(Role.ROLE_CUSTOMER)
 	@POST
 	public Response insert(Order order, @Context SecurityContext securityContext) {
 		System.out.println("User: " + securityContext.getUserPrincipal().getName());
-		System.out.println("OrderService#insert()");
-		return Response.ok("OrderService#insert()").build();
+		System.out.println("OrderService->insert()");
+		return Response.ok("OrderService->insert()").build();
 	}
 
 	@RolesAllowed({ Role.ROLE_ADMIN, Role.ROLE_CUSTOMER })
 	@PUT
 	public Response update(Order order) {
-		System.out.println("OrderService#update()");
-		return Response.ok("OrderService#update()").build();
+		System.out.println("OrderService->update()");
+		return Response.ok("OrderService->update()").build();
 	}
 
 	@RolesAllowed(Role.ROLE_ADMIN)
 	@DELETE
 	@Path("/{id}")
 	public Response delete(@PathParam("id") int id) {
-		System.out.println("OrderService#delete()");
-		return Response.ok("OrderService#delete()").build();
+		System.out.println("OrderService->delete()");
+		return Response.ok("OrderService->delete()").build();
 	}
 }
