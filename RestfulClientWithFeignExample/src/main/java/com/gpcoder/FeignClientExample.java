@@ -11,7 +11,7 @@ public class FeignClientExample {
 	private static OrderService orderService;
 
 	public static void main(String[] args) throws IOException {
-		orderService = FeignClientCreator.getOrderService(OrderService.class);
+		orderService = FeignClientCreator.getService(OrderService.class);
 
 		createOrder();
 		retrieveOrder();

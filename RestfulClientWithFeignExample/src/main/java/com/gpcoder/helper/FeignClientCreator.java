@@ -3,7 +3,6 @@ package com.gpcoder.helper;
 import com.gpcoder.handler.MyErrorDecoder;
 import com.gpcoder.interceptor.AuthInterceptor;
 import com.gpcoder.interceptor.LoggingInterceptor;
-import com.gpcoder.service.OrderService;
 
 import feign.Feign;
 import feign.Logger;
@@ -17,7 +16,7 @@ public class FeignClientCreator {
 
 	public static final String BASE_URL = "http://localhost:8080/RestfulWebServiceExample/rest/";
     
-	public static <T> T getOrderService(Class<T> clazz) {	
+	public static <T> T getService(Class<T> clazz) {	
 		okhttp3.OkHttpClient okHttpClient = new okhttp3.OkHttpClient.Builder()
 				.addInterceptor(new LoggingInterceptor())
 			    .addInterceptor(new AuthInterceptor())
@@ -30,7 +29,7 @@ public class FeignClientCreator {
 				  .client(feignOkHttp)
 				  .encoder(new FormEncoder(new GsonEncoder()))
 				  .decoder(new GsonDecoder())
-				  .logger(new Slf4jLogger(OrderService.class))
+				  .logger(new Slf4jLogger(clazz))
 				  .errorDecoder(new MyErrorDecoder())
 				  .logLevel(Logger.Level.FULL)
 				  .target(clazz, BASE_URL);

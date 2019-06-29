@@ -47,7 +47,7 @@ public class AuthInterceptor implements Interceptor {
 		}
 
 		// Create an implementation of the API endpoints defined by the service interface
-		AuthService authService = FeignClientCreator.getOrderService(AuthService.class);
+		AuthService authService = FeignClientCreator.getService(AuthService.class);
 
 		// Sends a request to a webserver and return its response
 		return authService.getToken("gpcoder", "gpcoder");
