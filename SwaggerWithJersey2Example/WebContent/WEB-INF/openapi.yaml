@@ -1,0 +1,25 @@
+prettyPrint: true
+cacheTTL: 0
+openAPI:
+  info:
+    description: "Swagger UI demo by gpcoder.com"
+    version: "1.0.0"
+    title: "Swagger UI Demo"
+    termsOfService: "http://swagger.io/terms/"
+    contact:
+      email: "contact@gpcoder.com"
+    license:
+      name: "Apache 2.0"
+      url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  servers:
+    - url: '/api'
+  # 1) Define the security scheme type (HTTP bearer)
+  components:
+    securitySchemes:
+      bearerAuth:            # arbitrary name for the security scheme
+        type: http
+        scheme: bearer
+        bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+  # 2) Apply the security globally to all operations
+  security:
+    - bearerAuth: []         # use the same name as above

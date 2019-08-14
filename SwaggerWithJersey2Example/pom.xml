@@ -1,0 +1,218 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>SwaggerWithJersey2Example</groupId>
+	<artifactId>SwaggerWithJersey2Example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<jersey.version>2.28</jersey.version>
+		<lombok.version>1.16.20</lombok.version>
+		<javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+		<javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+ 		<swagger.version>2.0.8</swagger.version>
+        <swagger-ui.version>3.23.4</swagger-ui.version>
+        <replacer.version>1.5.3</replacer.version>
+	</properties>
+
+	<dependencies>
+		<!-- Javax -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>${javax.ws.rs-api.version}</version>
+		</dependency>
+		<!-- Jersey -->
+		<dependency>
+            <groupId>org.glassfish.jersey.connectors</groupId>
+            <artifactId>jersey-apache-connector</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-server -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-common -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-common</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-multipart -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Java JWT: JSON Web Token for Java -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.10.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.10.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.10.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- Uncomment this next dependency if you want to use RSASSA-PSS (PS256, 
+			PS384, PS512) algorithms:  -->
+		<!-- <dependency> 
+			<groupId>org.bouncycastle</groupId> 
+			<artifactId>bcprov-jdk15on</artifactId>
+			<version>1.60</version> 
+			<scope>runtime</scope> 
+		</dependency> -->
+
+		<!-- Swagger -->
+		<!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-jaxrs2 -->
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-jaxrs2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-jaxrs2-servlet-initializer -->
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-jaxrs2-servlet-initializer</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<!-- Build with specified Java version -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Download Swagger UI webjar -->
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<!-- https://mvnrepository.com/artifact/org.webjars/swagger-ui -->
+								<dependency>
+								    <groupId>org.webjars</groupId>
+								    <artifactId>swagger-ui</artifactId>
+								    <version>${swagger-ui.version}</version>
+								</dependency>
+							</artifactItems>
+							<outputDirectory>${project.build.directory}/swagger-ui</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- Add Swagger UI resources to the war file. -->
+				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-war-plugin</artifactId>
+			    <version>3.2.3</version>
+				<configuration>
+					<webResources combine.children="append">
+						<resource>
+							<directory>${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui/${swagger-ui.version}</directory>
+							<includes>
+								<include>**/*.*</include>
+							</includes>
+							<targetPath>swagger-ui</targetPath>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Replace the OpenAPI specification example URL with the local one. -->
+				<!-- https://mvnrepository.com/artifact/com.google.code.maven-replacer-plugin/replacer -->
+			    <groupId>com.google.code.maven-replacer-plugin</groupId>
+			    <artifactId>replacer</artifactId>
+				<version>${replacer.version}</version>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<file>${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui/${swagger-ui.version}/index.html</file>
+					<replacements>
+						<replacement>
+							<token>https://petstore.swagger.io/v2/swagger.json</token>
+							<value>/api/openapi.json</value>
+						</replacement>
+					</replacements>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
