@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "ace88d43-ea49-4a98-b4e1-5b353f07e14e",
+		"name": "Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/auth/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "gpcoder",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "gpcoder",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/orders/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/orders/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncGNvZGVyIiwicm9sZXMiOlsiQWRtaW4iLCJDdXN0b21lciJdLCJqdGkiOiIwN2JiNTExZC1lYWQyLTQwMGUtYWFjZi02ZTQ5MzFhNGRjNWMiLCJpYXQiOjE1NjY0MDEwNTMsImlzcyI6Imh0dHBzOi8vZ3Bjb2Rlci5jb20iLCJleHAiOjE1NjY0MDI4NTN9.lW2EBZZ_W2MwS2Kob34W4o3VbkHL4axSksV-JMnt2N8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"test 1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/orders/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncGNvZGVyIiwicm9sZXMiOlsiQWRtaW4iLCJDdXN0b21lciJdLCJqdGkiOiIwN2JiNTExZC1lYWQyLTQwMGUtYWFjZi02ZTQ5MzFhNGRjNWMiLCJpYXQiOjE1NjY0MDEwNTMsImlzcyI6Imh0dHBzOi8vZ3Bjb2Rlci5jb20iLCJleHAiOjE1NjY0MDI4NTN9.lW2EBZZ_W2MwS2Kob34W4o3VbkHL4axSksV-JMnt2N8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"test 1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/orders/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncGNvZGVyIiwicm9sZXMiOlsiQWRtaW4iLCJDdXN0b21lciJdLCJqdGkiOiIwN2JiNTExZC1lYWQyLTQwMGUtYWFjZi02ZTQ5MzFhNGRjNWMiLCJpYXQiOjE1NjY0MDEwNTMsImlzcyI6Imh0dHBzOi8vZ3Bjb2Rlci5jb20iLCJleHAiOjE1NjY0MDI4NTN9.lW2EBZZ_W2MwS2Kob34W4o3VbkHL4axSksV-JMnt2N8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
