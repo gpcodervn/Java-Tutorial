@@ -15,11 +15,9 @@ import javax.ws.rs.core.SecurityContext;
 import com.gpcoder.model.Order;
 import com.gpcoder.model.Role;
 
-// URI:
-// http(s)://<domain>:(port)/<YourApplicationName>/<UrlPattern in web.xml>/<path>
 // http://localhost:8080/api/orders
 @Path("/orders")
-// @RolesAllowed(Role.ROLE_ADMIN)
+@RolesAllowed(Role.ROLE_ADMIN)
 public class OrderService {
 
 	@GET

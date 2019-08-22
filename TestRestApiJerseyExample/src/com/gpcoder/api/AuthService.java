@@ -12,16 +12,10 @@ import com.gpcoder.helper.JwTokenHelper;
 import com.gpcoder.model.User;
 import com.gpcoder.service.UserService;
 
+//http://localhost:8080/api/auth
 @Path("/auth")
 public class AuthService {
 
-	/**
-	 * Authenticating a user with their username/ password and issuing a token
-	 * 
-	 * @param username
-	 * @param password
-	 * @return JSON Web Token (JWT)
-	 */
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
