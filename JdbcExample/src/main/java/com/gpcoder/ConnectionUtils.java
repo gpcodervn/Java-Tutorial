@@ -4,14 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionUtils {
+import com.gpcoder.constants.DbConfiguration;
 
-	private static final String hostName = "localhost";
-	private static final String dbName = "jdbcdemo";
-	private static final String userName = "root";
-	private static final String password = "";
-	// jdbc:mysql://hostname:port/dbname
-	private static final String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
+public class ConnectionUtils {
+	
+	private ConnectionUtils() {}
 
 	public static Connection openConnection() throws SQLException {
 		// 1. Load Driver
@@ -19,6 +16,7 @@ public class ConnectionUtils {
 		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
 
 		// 2. Open connection
-		return DriverManager.getConnection(connectionURL, userName, password);
+		return DriverManager.getConnection(DbConfiguration.CONNECTION_URL, 
+				DbConfiguration.USER_NAME, DbConfiguration.PASSWORD);
 	}
 }
